@@ -51,7 +51,7 @@ import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
-import com.u1.slicer.BMAC_URL
+import com.u1.slicer.LUXWASH_URL
 import com.u1.slicer.util.toFloatLenient
 import com.u1.slicer.BuildConfig
 import com.u1.slicer.GITHUB_URL
@@ -375,16 +375,16 @@ fun SettingsScreen(
                     }
                 }
 
-                // Buy Me a Coffee card
+                // LuxWash website card
                 Card(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clickable {
                             context.startActivity(
-                                Intent(Intent.ACTION_VIEW, Uri.parse(BMAC_URL))
+                                Intent(Intent.ACTION_VIEW, Uri.parse(LUXWASH_URL))
                             )
                         },
-                    colors = CardDefaults.cardColors(containerColor = Color(0xFFFFDD00)),
+                    colors = CardDefaults.cardColors(containerColor = Color(0xFF171A20)),
                     shape = RoundedCornerShape(8.dp)
                 ) {
                     Row(
@@ -395,15 +395,15 @@ fun SettingsScreen(
                         Text("\u2615", fontSize = 22.sp)
                         Column {
                             Text(
-                                "Buy Me a Coffee",
+                                "LuxWash website",
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 13.sp,
-                                color = Color.Black
+                                color = Color(0xFFC8A65A)
                             )
                             Text(
-                                "buymeacoffee.com/taylormadearmy",
+                                "www.luxwash.online",
                                 fontSize = 10.sp,
-                                color = Color(0xFF555555)
+                                color = Color(0xFFE5E7EB)
                             )
                         }
                     }
@@ -493,7 +493,7 @@ fun SettingsScreen(
                 Text(
                     "Google sign-in is not supported inside the app browser. " +
                         "Best results come from opening MakerWorld in your browser, then " +
-                        "downloading the 3MF/STL there or sharing the model link back to Your One Slicer.",
+                        "downloading the 3MF/STL there or sharing the model link back to LuxWash 3D Print Manager.",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
                 )
@@ -893,7 +893,7 @@ private fun MakerWorldModeDialog(onDismiss: () -> Unit) {
                     style = MaterialTheme.typography.titleSmall
                 )
                 Text(
-                    "Best for signed-in browsing. Google login works here, and it is the most reliable way to download a 3MF/STL or share a MakerWorld model link back to Your One Slicer.",
+                    "Best for signed-in browsing. Google login works here, and it is the most reliable way to download a 3MF/STL or share a MakerWorld model link back to LuxWash 3D Print Manager.",
                     style = MaterialTheme.typography.bodySmall
                 )
                 HorizontalDivider()
