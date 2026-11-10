@@ -167,7 +167,7 @@ class MainActivity : ComponentActivity() {
         val summary = viewModel.buildModelDebugSummary() ?: return
         val clipboard = getSystemService(android.content.ClipboardManager::class.java)
         clipboard.setPrimaryClip(
-            android.content.ClipData.newPlainText("Your One Slicer Model Debug Summary", summary)
+            android.content.ClipData.newPlainText("LuxWash 3D Print Manager Model Debug Summary", summary)
         )
         android.widget.Toast.makeText(this, "Debug summary copied", android.widget.Toast.LENGTH_SHORT).show()
     }
@@ -2044,16 +2044,16 @@ fun PrepareScreen(
             TopAppBar(
                 title = {
                     Column {
-                        Text("Your One Slicer", fontWeight = FontWeight.Bold)
+                        Text("LuxWash 3D Print Manager", fontWeight = FontWeight.Bold)
                         Text(
-                            "☕ Support development",
+                            "🌐 www.luxwash.online",
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.primary,
                             modifier = Modifier.clickable {
                                 context.startActivity(
                                     android.content.Intent(
                                         android.content.Intent.ACTION_VIEW,
-                                        android.net.Uri.parse(BMAC_URL)
+                                        android.net.Uri.parse(LUXWASH_URL)
                                     )
                                 )
                             }
@@ -2760,7 +2760,7 @@ private fun MakerWorldModeDialog(onDismiss: () -> Unit) {
                     style = MaterialTheme.typography.titleSmall
                 )
                 Text(
-                    "Best for signed-in browsing. Google login works here, and it is the most reliable way to download a 3MF/STL or share a MakerWorld model link back to Your One Slicer.",
+                    "Best for signed-in browsing. Google login works here, and it is the most reliable way to download a 3MF/STL or share a MakerWorld model link back to LuxWash 3D Print Manager.",
                     style = MaterialTheme.typography.bodySmall
                 )
                 HorizontalDivider()
@@ -2841,16 +2841,16 @@ fun PreviewScreen(
             TopAppBar(
                 title = {
                     Column {
-                        Text("Your One Slicer", fontWeight = FontWeight.Bold)
+                        Text("LuxWash 3D Print Manager", fontWeight = FontWeight.Bold)
                         Text(
-                            "☕ Support development",
+                            "🌐 www.luxwash.online",
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.primary,
                             modifier = Modifier.clickable {
                                 context.startActivity(
                                     android.content.Intent(
                                         android.content.Intent.ACTION_VIEW,
-                                        android.net.Uri.parse(BMAC_URL)
+                                        android.net.Uri.parse(LUXWASH_URL)
                                     )
                                 )
                             }
